@@ -9,8 +9,19 @@ params:
   package_parent_dir: "." # <-- relative to this file's location
 ---
 
-<!-- This Rmd file contains all the code needed to define an R package.  Press "Knit" in RStudio or more generally run `litr::render("name-of-this-file.Rmd")` to generate the R package.  Remember that when you want to modify anything about the R package, you should modify this document rather than the package that is outputted.
--->
+## How I created this repo
+
+1. I created a new empty repo named `rhello-project` in GitHub and ran the following from an R console:
+
+```{r, eval=FALSE}
+rmarkdown::draft("README.Rmd",
+                 template = "make-an-r-package",
+                 package = "litr")
+```
+
+2. At the top of `README.Rmd`, I changed `output: litr::litr_html_document` to `output: github_document`.
+
+3. I pressed "Knit" in RStudio. (Alternatively could have run `litr::render("README.Rmd")` from the R console.). This generated `rhello` and `README.md`.  [And of course I then added this section describing what I did!]
 
 ## Package setup
 
